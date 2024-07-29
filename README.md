@@ -1,19 +1,23 @@
 # Registration-System-using-Django
-This repository contain the code files required for a Registration System i.e sign up ,login , logout and additionally it has the concept of confirmation email that means that the user will receive the email for confirmation of his/her account.
-# necessery installations
-##you must have the following things installed
-###python
-###django
-###run miagrations 
-###created a super user 
-#Views functions
-1 SignUpPage ==> it will only render the signup.html (which contain the signup form) 
-2 user_signup ==> it will get the input from the user i.e username, first name ,last name ,email, and password and then create the user
-                  and then the user will receive the confirmation email. after confirmation the user will be redirected to login page
-3 Login_page ==> it will only render the login.html (contain the login form)
-4 user_login ==> it will receive the login information entered and the if the user is athunticated then he/she will be logged in and 
-                 the user will be redirectd to home page.
-5 logout ==> it will simply logout the user from data base
 
-                      
-                          
+This repository contains the code files required for a Registration System, including sign-up, login, logout functionalities, and a confirmation email feature. Users will receive a confirmation email to verify their account.
+
+## Necessary Installations
+
+To run this project, you need to have the following installed:
+
+- **Python**
+- **Django**
+
+Additionally, make sure to:
+
+- Run migrations
+- Create a super user
+
+## View Functions
+
+1. **SignUpPage**  
+   This view function renders the `signup.html` template, which contains the signup form.
+
+2. **user_signup**  
+   This function takes input from the user (username, first name, last name, email, and password) and creates a new user. After creating the user, a confirmation email is sent to the user. Once confirmed, the user is redirected to the login page.
