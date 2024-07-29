@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color:  rgb(79, 78, 82); */
+            background-image: url("/static/form-background.jpg");
+            background-size: cover;
+            /* background-repeat:; */
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+        
+        .signup-container {
+            /* background: transparent; */
+            background-color: rgba(24, 24, 24, 0.6);
+            padding-left: 20px;
+            border-radius: 8px;
+            /* border: 1px solid black; */
+            box-shadow: 0 2px 4px rgb(228, 225, 225);
+            width: 400px;
+            height: 550px ;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .sign-up-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color:  white;
+            gap: 10px;
+            /* border: 1px solid yellow; */
+        }
+        .signup-container h2 {
+            color: rgb(165, 146, 202);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* margin-bottom: 20px; */
+            text-align: center;
+          
+        }
+        .signup-container label {
+            display: block;
+            /* margin: 10px 0 5px; */
+            margin-bottom: -3px;
+        }
+        .signup-container input {
+            width: 90%;
+            padding: 6px;
+            /* margin: 5px 0 10px; */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .signup-container button {
+            width: 93%;
+            /* padding: 10px; */
+            background-color: #080261;
+            color: white;
+            border: none;
+            height: 37px;
+            border-radius: 10px 10px 10px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            /* align-self: center; */
+            transition: all 0.3s ease-in-out;
+            margin-top:4px;
+            
+        }
+         .signup-container button:hover {
+            width: 96%;
+            border: 0.5px solid rgb(255, 251, 251);
+            background-color: #1005a5;
+        }
+        .message {
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+            
+        } /**/
+        .signup-container p {
+            margin-bottom: 30%;
+        }
+        .signup-container a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Sign Up hear</h2>
+        <form class = 'sign-up-form' action="{% url 'user_signup' %}" method="post">
+             {% csrf_token %} 
+
+             <label for="username">Username</label>
+             <input type="text" id="username" name="username" placeholder="Only letters and numbers! not @ # etc" required>
+
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+            
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label for="password1">Password</label>
+            <input type="password" id="password1" name="password1" placeholder="Password" required>
+            
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
+
+            <button type="submit" name='perform'>Sign Up</button>
+        </form>
+        <a href="{% url 'Login_page' %}"><p>I allready have an account!</p></a>
+    </div>
+    
+</body>
+</body>
+</html>
+
+
+
+    
